@@ -24,12 +24,29 @@ const config = {
     apiRoot: process.env.API_ROOT || '',
     masterKey: requireProcessEnv('MASTER_KEY'),
     jwtSecret: requireProcessEnv('JWT_SECRET'),
+    mongo: {
+      options: {
+        db: {
+          safe: true
+        }
+      }
+    }
   },
-  test: { },
-  development: {},
+  test: {},
+  development: {
+    mongo: {
+      uri: 'mongodb://localhost/api-test-dev',
+      options: {
+        debug: true
+      }
+    }
+  },
   production: {
     ip: process.env.IP || undefined,
     port: process.env.PORT || 8080,
+    mongo: {
+      uri: process.env.MONGODB_URI || 'mongodb://localhost/api-test'
+    }
   }
 }
 
