@@ -4,13 +4,19 @@
   "main": "src",
   "private": true,
   "scripts": {
-    "start": "node .",
+    "start": "nodemon .",
     "dev": "nodemon -i .",
-    "prod": "cross-env NODE_ENV=production nodemon -i \"*.test.js\" -r dotenv-safe/config ."
+    "prod": "cross-env NODE_ENV=production nodemon .",
+    "docs": "apidoc -i src -o docs && apidoc-markdown -p docs -o DOCS.md",
+    "postdocs": "open-cli docs/index.html -- chrome"
   },
   "devDependencies": {
+    "apidoc": "^0.17.7",
+    "apidoc-markdown": "^0.2.1",
+    "cross-env": "^6.0.3",
     "dotenv-safe": "^8.1.0",
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "open-cli": "^5.0.0"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
