@@ -2,8 +2,8 @@ import bcrypt from 'bcrypt'
 import objectHash from 'object-hash'
 import mongoose, { Schema } from 'mongoose'
 import mongooseKeywords from 'mongoose-keywords'
-import { env } from '../../config'
 import { generate } from 'rand-token'
+import { env } from '../../config'
 
 const roles = ['user', 'admin']
 
