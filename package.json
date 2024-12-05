@@ -15,7 +15,7 @@
     "apidoc-markdown": "^0.2.1",
     "cross-env": "^6.0.3",
     "dotenv-safe": "^8.1.0",
-    "nodemon": "^1.10.2",
+    "nodemon": "^2.0.20",
     "open-cli": "^5.0.0"
   },
   "dependencies": {
